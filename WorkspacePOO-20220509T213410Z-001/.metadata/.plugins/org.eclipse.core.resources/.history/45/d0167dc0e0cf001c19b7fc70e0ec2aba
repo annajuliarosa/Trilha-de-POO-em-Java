@@ -1,0 +1,42 @@
+import javax.swing.JOptionPane;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		int continuar;
+		
+		do {
+			double num1= solicitaNumero("1º");
+			double num2= solicitaNumero("2º");
+			int operacao= solicitaOperacao();
+			
+			continuar= Integer.parseInt(JOptionPane.showInputDialog("Deseja continuar calculando? 1 - Sim | 2 - Não"));
+			
+		}while(continuar==1);
+		
+		
+	}
+	
+	static int solicitaOperacao() {
+		int operacao = Integer.parseInt(JOptionPane.showInputDialog("Escolha a operação desejada: \n"
+				+ "1 - Soma\n"
+				+ "2 - Subtração\n"
+				+ "3 - Divisao\n"
+				+ "4 - Multiplicação"));
+		
+		
+		return operacao;
+		
+	}
+	
+	static int solicitaNumero(String ordem) {
+		
+		double num = Double.parseDouble(JOptionPane.showInputDialog("Informe o "+ordem+"numero"));
+		
+		return num;
+	}
+	
+}
+
+
+

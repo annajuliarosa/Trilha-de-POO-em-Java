@@ -1,0 +1,10 @@
+if(this.casa==null && opcao==1) {	
+			
+				do {
+					JOptionPane.showMessageDialog(null, "Casa ainda não está contruída!!");
+					opcao= EntradaSaida.solicitaOpcao();
+					
+				}while(this.casa==null);
+				
+				
+			}
